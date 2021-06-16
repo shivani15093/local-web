@@ -6,7 +6,7 @@ import lombok.Data;
 import java.util.Date;
 @Data
 @Builder
-public class MetaDataModel {
+public class WebPageMetaDataModel {
     String site;
     int num_links;
     int images;
