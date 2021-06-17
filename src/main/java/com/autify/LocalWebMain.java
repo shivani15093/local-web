@@ -21,7 +21,14 @@ public class LocalWebMain {
         }
         else{
             for(String url : args){
-                downloadWebPageService.downloadWebPage(url);
+                String downloadedFile = downloadWebPageService.downloadWebPage(url);
+                if(downloadedFile!=null && !downloadedFile.isEmpty()){
+                    System.out.println("Successfully Downloaded - " + downloadedFile);
+                }
+                else{
+                    System.out.println("Download Failed !");
+                }
+
             }
         }
     }
