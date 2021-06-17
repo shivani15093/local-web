@@ -47,7 +47,7 @@ public class FileManager {
             writer.close();
         }
         catch (IOException e) {
-            System.out.println("IOException raised - " + e.getMessage());
+            System.out.println("IOException raised  while reading/writing file - " + e.getMessage());
             return null;
         }
         return fileName;

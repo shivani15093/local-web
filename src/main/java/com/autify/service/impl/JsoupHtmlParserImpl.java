@@ -18,6 +18,7 @@ public class JsoupHtmlParserImpl implements JsoupHtmlParser {
         }
         catch (IOException e) {
             System.out.println("IOException raised - " + e.getMessage());
+            System.exit(0);
         }
         return doc;
     }

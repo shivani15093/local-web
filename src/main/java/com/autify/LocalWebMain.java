@@ -28,7 +28,6 @@ public class LocalWebMain {
                 else{
                     System.out.println("Download Failed !");
                 }
-
             }
         }
     }

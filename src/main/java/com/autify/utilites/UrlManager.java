@@ -11,7 +11,9 @@ public class UrlManager {
         try {
             url = new URL(urlString);
         } catch (MalformedURLException e) {
-            System.out.println("Malformed URL Exception raised - " + e.getMessage());
+            System.out.println("Malformed URL Exception raised while creating URL object - "
+                    + e.getMessage());
+            System.exit(0);
         }
         return url;
     }
@@ -20,7 +22,8 @@ public class UrlManager {
         try {
             connection = createUrlObjFromUrlStr(urlString).openConnection();
         } catch (IOException e) {
-            System.out.println("IOException raised - " + e.getMessage());
+            System.out.println("IOException raised while opening URLConnection - " + e.getMessage());
+            System.exit(0);
         }
         // Added this property in order to resolve 403 FORBIDDEN issue
         connection.addRequestProperty("User-Agent", "Chrome");
